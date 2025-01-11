@@ -22,7 +22,7 @@ export default function Home() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex flex-col gap-4 w-[350px] mx-auto md:w-[750px] xl:w-full md:tracking-wide"
+      className="flex flex-col mx-6 md:mx-8 xl:mx-20 md:tracking-wide"
     >
       <Navbar />
       <Hero />

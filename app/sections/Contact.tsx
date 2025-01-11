@@ -11,7 +11,7 @@ interface ContactProps {
 
 const Contact = ({ t, theme }: ContactProps) => {
   return (
-    <section className="flex flex-col xl:max-w-7xl mx-auto mb-32">
+    <section className="flex flex-col mb-32">
       <div className="flex flex-col justify-center items-center mb-6">
         <h3 className="font-bold text-2xl md:text-4xl xl:text-6xl text-center flex justify-center items-center gap-2">
           {t.contact}
@@ -23,7 +23,7 @@ const Contact = ({ t, theme }: ContactProps) => {
         />
       </div>
       <h4 className="md:font-semibold text-lg text-center">{t.contactNote}</h4>
-      <div className="flex justify-center items-center gap-12 mt-6">
+      <div className="flex justify-center items-center gap-10 mt-6">
         <Link href="https://t.me/de3bug" target="_blank">
           {" "}
           <svg

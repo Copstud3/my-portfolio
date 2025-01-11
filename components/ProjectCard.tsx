@@ -36,7 +36,7 @@ const ProjectCard = (props: ProjectCardProps) => {
       </div>
       
       {/* Button container - will stay at bottom */}
-      <div className="flex justify-between mt-auto pt-4">
+      <div className="flex justify-between mt-auto pt-4 gap-4">
         {link && (
           <button className="border-2 py-2 px-3 hover:backdrop-brightness-90">
             <Link href={link} target="_blank">Demo</Link>

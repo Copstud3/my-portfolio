@@ -15,7 +15,7 @@ export default function Hero() {
   const t = translations[language];
   return (
     <section
-      className={`flex flex-col gap-4 xl:gap-6 justify-center items-center mt-32 mb-32 xl:max-w-7xl mx-auto`}
+      className={`flex flex-col gap-4 xl:gap-6 justify-center items-center mt-32 mb-32`}
     >
       <Image
         src={ghostface}
@@ -24,14 +24,14 @@ export default function Hero() {
         width={200}
         height={200}
       />
-      <h1 className="text-2xl md:text-4xl">{t.title}</h1>
-      <div className="text-center text-2xl md:text-5xl font-bold xl:text-7xl">
+      <h1 className="text-xl md:text-4xl">{t.title}</h1>
+      <div className="text-center text-xl md:text-5xl font-bold xl:text-7xl">
         <TypedEffect strings={t.subtitle} />
       </div>
       <p className="font-medium text-lg md:text-xl text-center xl:text-2xl">
         {t.description}
       </p>
-      <div className="flex gap-4 text-xl">
+      <div className="flex gap-4 text-xl justify-center items-center">
         <Link
           href="/CHRISTOPHER CHUKWUEBUKA - CV.pdf"
           download="CHRISTOPHER CHUKWUEBUKA - CV.pdf"
@@ -43,7 +43,7 @@ export default function Hero() {
           {t.resumeButton} <Download />
         </Link>
       </div>
-      <div className="flex justify-center items-center gap-12 mt-6">
+      <div className="flex justify-center items-center gap-10 mt-6">
         <Link href="https://t.me/de3bug" target="_blank">
           {" "}
           <svg
