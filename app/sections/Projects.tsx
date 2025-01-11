@@ -25,7 +25,7 @@ export default function Projects({ t, theme }: ProjectsProps) {
   return (
     <section className="mb-36">
       <div className="flex flex-col justify-center items-center">
-        <h3 className="font-bold text-2xl md:text-4xl  xl:text-6xl text-center md:text-left">
+        <h3 className="font-bold text-2xl md:text-4xl xl:text-6xl text-center md:text-left">
           {t.projectButton}
         </h3>
         <hr
@@ -37,7 +37,7 @@ export default function Projects({ t, theme }: ProjectsProps) {
       <div className="grid md:grid-cols-2 gap-8 xl:mx-[400px] mt-4">
       <ProjectCard
         theme={theme} link={`https://layers-tawny.vercel.app`} github="https://github.com/Copstud3/Layers"      
-         className={`mt-8 md:hover:scale-105 transition-all duration-300 cursor-pointer ${
+         className={`mt-8 hover:scale-105 transition-all duration-300 cursor-pointer ${
           theme === "dark" ? "border-dull-brown" : "border-coral-blue"
         }`}
         title="Layers"
