@@ -9,7 +9,7 @@ interface AboutProps {
 
 export default function About({ t, theme }: AboutProps) {
   return (
-    <section className="flex flex-col xl:max-w-7xl mx-auto xl:mt-20 mt-20">
+    <section className="flex flex-col xl:max-w-7xl mx-auto xl:mt-20">
       <div className="flex flex-col justify-center items-center">
         <h3 className="font-bold text-2xl md:text-4xl  xl:text-6xl text-center md:text-left">
           {t.about}
