@@ -18,7 +18,7 @@ export const translations = {
       skillsNote: "PS: I'm constantly upskilling as I can adapt well with about any team or environment",
       projectNote: "As I mentioned earlier, I'm constantly trying to upskill so expect more projects in the nearest future, wink!",
       contact: "Find me",
-      contactNote: "I know you want me on your next big project by now. Find me on the platforms below and let's make it happen",
+      contactNote: "I know you want me on your next big project by now. Find me on these platforms below and let's make it happen",
   },
   fr: {
     title: "Christopher Chukwuebuka",
