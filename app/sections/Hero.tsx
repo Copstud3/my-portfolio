@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useTheme } from "next-themes"; // Assuming you are using next-themes for theme management
 
 import ghostface from "@/public/images/A Ghost Story.jpeg";
-import { Download, GithubIcon, Linkedin, XIcon } from "lucide-react";
+import { Download } from "lucide-react";
 
 export default function Hero() {
   const { language } = useLanguage();

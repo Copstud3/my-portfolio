@@ -1,8 +1,5 @@
 import React from "react";
 import { translations } from "../translations";
-import { LinkedinIcon } from "lucide-react";
-import telegram from "@/public/images/telegram-svgrepo-com.svg";
-import Image from "next/image";
 import Link from "next/link";
 
 type TranslationType = (typeof translations)[keyof typeof translations];
