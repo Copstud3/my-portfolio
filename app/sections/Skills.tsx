@@ -40,7 +40,7 @@ interface SkillsProps {
 
 export default function Skills({ t, theme }: SkillsProps) {
   return (
-    <section className="xl:mt-64 xl:mb-40 md:mt-32 mt-24 mb-24">
+    <section className="xl:mt-64 mb-32">
       <div className="flex flex-col justify-center items-center mb-6">
         <h3 className="font-bold text-2xl md:text-4xl xl:text-6xl text-center flex justify-center items-center gap-2">
           {t.skills} <RocketIcon className=" size-8 xl:size-20" />

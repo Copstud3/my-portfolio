@@ -23,7 +23,7 @@ interface ProjectsProps {
 
 export default function Projects({ t, theme }: ProjectsProps) {
   return (
-    <section className="mb-36">
+    <section className="mb-32">
       <div className="flex flex-col justify-center items-center">
         <h3 className="font-bold text-2xl md:text-4xl xl:text-6xl text-center md:text-left">
           {t.projectButton}
