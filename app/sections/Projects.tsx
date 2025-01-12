@@ -4,14 +4,13 @@ import { translations } from "../translations";
 import LayersImg from "@/public/images/layers.webp";
 import Quickmed from "@/public/images/quickmed.webp"
 import Nike from "@/public/images/nike-prototype.webp"
-import recipesaga from "@/public/images/recipesaga.webp"
 import NextJS from "@/public/images/nextjs.svg";
 import Tailwind from "@/public/images/tailwind-css.svg";
 import Ts from "@/public/images/typescript.svg";
 import framerIcon from "@/public/images/framer.svg";
 import reactIcon from "@/public/images/react js_logo.svg";
 import jsIcon from "@/public/images/javascript.svg";
-import cssIcon from "@/public/images/icons8-css3.svg";
+
 
 
 type TranslationType = (typeof translations)[keyof typeof translations];
