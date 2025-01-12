@@ -34,10 +34,10 @@ export default function Projects({ t, theme }: ProjectsProps) {
           }`}
         />
       </div>
-      <div className="grid md:grid-cols-2 gap-8 xl:mx-[400px] mt-4">
+      <div className="grid lg:grid-cols-2 gap-8 md:max-w-md md:mx-auto lg:max-w-4xl  mt-4">
       <ProjectCard
         theme={theme} link={`https://layers-tawny.vercel.app`} github="https://github.com/Copstud3/Layers"      
-         className={`mt-8 hover:scale-105 transition-all duration-300 cursor-pointer ${
+         className={`mt-8 hover:scale-105 transition-all duration-300 cursor-pointer  ${
           theme === "dark" ? "border-dull-brown" : "border-coral-blue"
         }`}
         title="Layers"
@@ -62,7 +62,7 @@ export default function Projects({ t, theme }: ProjectsProps) {
      {/*Second project card*/}
       <ProjectCard
         theme={theme}
-        className={`mt-8 hover:scale-105 transition-all duration-300 cursor-pointer ${
+        className={`mt-8 hover:scale-105 transition-all duration-300 cursor-pointer${
           theme === "dark" ? "border-dull-brown" : "border-coral-blue"
         }`}
         title="QuickMed" github="https://github.com/Copstud3/QuickMed" link="https://quickmed-nine.vercel.app"
@@ -85,7 +85,7 @@ export default function Projects({ t, theme }: ProjectsProps) {
       {/*Third Project Card*/}
       <ProjectCard
         theme={theme}
-        className={`mt-8 hover:scale-105 transition-all duration-300 cursor-pointer ${
+        className={`mt-8 hover:scale-105 transition-all duration-300 cursor-pointer lg:col-span-2 lg:max-w-[432px] lg:mx-auto ${
           theme === "dark" ? "border-dull-brown" : "border-coral-blue"
         }`}
         title="Nike website clone" github="https://github.com/Copstud3/nikewebsite" link="https://nike-prototype.netlify.app/"
@@ -105,29 +105,7 @@ export default function Projects({ t, theme }: ProjectsProps) {
           </ul>
         </div>
       </ProjectCard>
-      {/*Fourth Project Card*/}
-      <ProjectCard
-        theme={theme}
-        className={`mt-8 hover:scale-105 transition-all duration-300 cursor-pointer ${
-          theme === "dark" ? "border-dull-brown" : "border-coral-blue"
-        }`}
-        title="RecipeSaga" github="https://github.com/Copstud3/recipesagaapp" link="https://recipesagaapp.vercel.app/"
-        description="RecipeSaga is a React.js-based web application that showcases a collection of food and drink recipes with the help of spoonacularAPI. This project was developed as part of my portfolio to demonstrate my skills in front-end development, particularly with React.js."
-      >
-        <div className="flex flex-col justify-center items-center">
-          <Image src={recipesaga} alt="sss" width={500} className="rounded-lg" />
-
-          <ul className="list-none mt-2 flex justify-center items-center gap-4">
-            <li>
-              <Image src={jsIcon} className="h-10 w-10" alt="nextJs" />
-            </li>
-            <li>
-              <Image src={reactIcon} className="h-10 w-10" alt="nextJs" />
-            </li>
-            <li><Image src={cssIcon} className="h-10 w-10"alt="nextJs"/></li>
-          </ul>
-        </div>
-      </ProjectCard>
+     
       </div>
       <div className="text-center mt-10 xl:mx-72">
         <p className="md:font-semibold text-lg">{t.projectNote}</p>
