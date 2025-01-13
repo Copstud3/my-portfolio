@@ -19,7 +19,7 @@ export function LanguageSwitcher() {
     <select
       value={language}
       onChange={(e) => setLanguage(e.target.value as Language)}
-      className="p-2 rounded-[5px] bg-background text-text cursor-pointer shadow-none dark:hover:bg-[#242f32] outline-none"
+      className="p-2 rounded-[5px] bg-background text-text cursor-pointer shadow-none hover:backdrop-brightness-150 outline-none"
       aria-label="Select language"
     >
       {Object.entries(languageNames).map(([code, name]) => (
