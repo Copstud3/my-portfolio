@@ -15,7 +15,7 @@ export default function Hero() {
   const t = translations[language];
   return (
     <section
-      className={`flex flex-col gap-4 xl:gap-6 justify-center items-center mt-32 mb-32`}
+      className={`flex flex-col gap-4 xl:gap-6 xl:h-lvh justify-center items-center max-xl:mt-28 mb-32`}
     >
       <Image
         src={ghostface}
