@@ -8,6 +8,7 @@ import { useTheme } from "next-themes"; // Assuming you are using next-themes fo
 
 import myImg from "@/public/images/my-image.jpg"
 import { Download } from "lucide-react";
+import SimpleProfileModal from "@/components/SimpleProfileModal";
 
 export default function Hero() {
   const { language } = useLanguage();
@@ -17,7 +18,7 @@ export default function Hero() {
     <section
       className={`flex flex-col gap-4 xl:gap-6 xl:h-lvh justify-center items-center max-xl:mt-28 mb-32`}
     >
-      <Image
+      {/* <Image
         src={myImg}
         alt="profile image"
         className={`rounded-full max-sm:w-[180px] border-2 p-2 ${
@@ -25,7 +26,8 @@ export default function Hero() {
           }`}
         width={200}
         height={200}
-      />
+      /> */}
+      <SimpleProfileModal theme={theme} />
       <h1 className="text-xl md:text-4xl">{t.title}</h1>
       <div className="text-center text-xl md:text-5xl font-bold xl:text-7xl">
         <TypedEffect strings={t.subtitle} />
