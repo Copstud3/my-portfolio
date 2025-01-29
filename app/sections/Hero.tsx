@@ -20,7 +20,9 @@ export default function Hero() {
       <Image
         src={myImg}
         alt="profile image"
-        className="rounded-full max-sm:w-[130px]"
+        className={`rounded-full max-sm:w-[180px] border-2 p-2 ${
+            theme === "dark" ? "border-dull-brown" : "border-coral-blue"
+          }`}
         width={200}
         height={200}
       />
