@@ -1,12 +1,9 @@
 "use client";
 import { TypedEffect } from "../../components/typedEffect";
-import Image from "next/image";
 import { translations } from "../translations";
 import { useLanguage } from "../languageContext";
 import Link from "next/link";
 import { useTheme } from "next-themes"; // Assuming you are using next-themes for theme management
-
-import myImg from "@/public/images/my-image.jpg"
 import { Download } from "lucide-react";
 import SimpleProfileModal from "@/components/SimpleProfileModal";
 
