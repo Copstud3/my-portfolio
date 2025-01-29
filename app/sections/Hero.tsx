@@ -6,7 +6,7 @@ import { useLanguage } from "../languageContext";
 import Link from "next/link";
 import { useTheme } from "next-themes"; // Assuming you are using next-themes for theme management
 
-import ghostface from "@/public/images/A Ghost Story.jpeg";
+import myImg from "@/public/images/my-image.jpg"
 import { Download } from "lucide-react";
 
 export default function Hero() {
@@ -18,7 +18,7 @@ export default function Hero() {
       className={`flex flex-col gap-4 xl:gap-6 xl:h-lvh justify-center items-center max-xl:mt-28 mb-32`}
     >
       <Image
-        src={ghostface}
+        src={myImg}
         alt="profile image"
         className="rounded-full max-sm:w-[130px]"
         width={200}
