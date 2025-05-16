@@ -42,9 +42,7 @@ export default function Skills({ t, theme }: SkillsProps) {
           {t.skills} <RocketIcon className="size-8 xl:size-12" />
         </h3>
         <hr
-          className={`w-20 xl:w-32 border-t-4 xl:border-t-8 mt-2 xl:mt-3 ${
-            theme === "dark" ? "border-dull-brown" : "border-coral-blue"
-          }`}
+          className={`w-20 xl:w-32 border-t-4 xl:border-t-8 mt-2 xl:mt-3 border-foreground`}
         />
       </div>
 

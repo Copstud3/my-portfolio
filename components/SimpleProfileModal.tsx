@@ -1,53 +1,53 @@
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
-import myImg from '@/public/images/my-image.jpg';
+// import React, { useState, useEffect } from 'react';
+// import myImg from '@/public/images/my-image.jpg';
 
 interface SimpleProfileModalProps {
   theme?: string; // Making theme optional
 }
 
 const SimpleProfileModal = ({ theme }: SimpleProfileModalProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+  // const [isAnimating, setIsAnimating] = useState(false);
 
-  const openModal = () => {
-    setIsOpen(true);
-    setIsAnimating(true);
-  };
+  // const openModal = () => {
+  //   setIsOpen(true);
+  //   setIsAnimating(true);
+  // };
 
-  const closeModal = () => {
-    setIsAnimating(false);
-    setTimeout(() => setIsOpen(false), 300); // Wait for animation before unmounting
-  };
+  // const closeModal = () => {
+  //   setIsAnimating(false);
+  //   setTimeout(() => setIsOpen(false), 300); // Wait for animation before unmounting
+  // };
 
-  const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (e.target === e.currentTarget) {
-      closeModal();
-    }
-  };
+  // const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  //   if (e.target === e.currentTarget) {
+  //     closeModal();
+  //   }
+  // };
 
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') closeModal();
-    };
+  // useEffect(() => {
+  //   const handleEscape = (e: KeyboardEvent) => {
+  //     if (e.key === 'Escape') closeModal();
+  //   };
 
-    if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
-    }
+  //   if (isOpen) {
+  //     document.addEventListener('keydown', handleEscape);
+  //   }
 
-    return () => {
-      document.removeEventListener('keydown', handleEscape);
-    };
-  }, [isOpen]);
+  //   return () => {
+  //     document.removeEventListener('keydown', handleEscape);
+  //   };
+  // }, [isOpen]);
 
   return (
     <div>
       <button 
-        onClick={openModal}
+        // onClick={openModal}
         className="relative overflow-hidden transition-all duration-300 hover:scale-105"
       >
         <Image 
-          src={myImg} 
+          src="/profile.jpg" 
           alt="profile image" 
           className={`rounded-full border-2 p-2 ${
             theme === 'dark' ? 'border-dull-brown' : 'border-coral-blue'
@@ -57,7 +57,7 @@ const SimpleProfileModal = ({ theme }: SimpleProfileModalProps) => {
         />
       </button>
 
-      {isOpen && (
+      {/* {isOpen && (
         <div 
           className={`fixed inset-0 bg-black flex items-center justify-center z-50 p-4 transition-opacity duration-300 ease-in-out ${
             isAnimating ? 'bg-opacity-50 opacity-100' : 'bg-opacity-0 opacity-0'
@@ -84,7 +84,7 @@ const SimpleProfileModal = ({ theme }: SimpleProfileModalProps) => {
             />
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

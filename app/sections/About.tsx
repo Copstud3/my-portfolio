@@ -15,9 +15,7 @@ export default function About({ t, theme }: AboutProps) {
           {t.about}
         </h3>
         <hr
-          className={`xl:w-[120px] w-20 border-t-4 xl:border-t-8 mt-2 xl:mt-3 text-center  ${
-            theme === "dark" ? "border-dull-brown" : "border-coral-blue"
-          }`}
+          className={`xl:w-[120px] w-20 border-t-4 xl:border-t-8 mt-2 xl:mt-3 text-center border-foreground`}
         />
       </div>
       <p className="mt-4 xl:mt-6 font-medium text-center text-lg md:text-xl xl:text-2xl">

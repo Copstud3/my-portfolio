@@ -28,17 +28,13 @@ export default function Projects({ t, theme }: ProjectsProps) {
           {t.projectButton}
         </h3>
         <hr
-          className={`xl:w-[120px] w-20 border-t-4 xl:border-t-8 mt-2 xl:mt-4 text-center  ${
-            theme === "dark" ? "border-dull-brown" : "border-coral-blue"
-          }`}
+          className={`xl:w-[120px] w-20 border-t-4 xl:border-t-8 mt-2 xl:mt-4 text-center border-foreground`}
         />
       </div>
       <div className="grid lg:grid-cols-2 gap-8 md:max-w-md md:mx-auto lg:max-w-4xl  mt-4">
       <ProjectCard
         theme={theme} link={`https://layers-tawny.vercel.app`} github="https://github.com/Copstud3/Layers"      
-         className={`mt-8 hover:scale-105 transition-all duration-300 cursor-pointer  ${
-          theme === "dark" ? "border-dull-brown" : "border-coral-blue"
-        }`}
+         className={`mt-8 hover:scale-105 transition-all duration-300 cursor-pointer  border-foreground`}
         title="Layers"
         description="An amazing landing page for a design SaaS with sign up and login pages."
       >
@@ -61,9 +57,7 @@ export default function Projects({ t, theme }: ProjectsProps) {
      {/*Second project card*/}
       <ProjectCard
         theme={theme}
-        className={`mt-8 hover:scale-105 transition-all duration-300 cursor-pointer${
-          theme === "dark" ? "border-dull-brown" : "border-coral-blue"
-        }`}
+        className={`mt-8 hover:scale-105 transition-all duration-300 cursor-pointer border-foreground`}
         title="QuickMed" github="https://github.com/Copstud3/QuickMed" link="https://quickmed-nine.vercel.app"
         description="A landing page designed for healthcare providers, offering seamless navigation, visually appealing UI components, and a responsive design that adapts to all devices."
       >
@@ -84,9 +78,7 @@ export default function Projects({ t, theme }: ProjectsProps) {
       {/*Third Project Card*/}
       <ProjectCard
         theme={theme}
-        className={`mt-8 hover:scale-105 transition-all duration-300 cursor-pointer lg:col-span-2 lg:max-w-[432px] lg:mx-auto ${
-          theme === "dark" ? "border-dull-brown" : "border-coral-blue"
-        }`}
+        className={`mt-8 hover:scale-105 transition-all duration-300 cursor-pointer lg:col-span-2 lg:max-w-[432px] lg:mx-auto border-foreground`}
         title="Nike website clone" github="https://github.com/Copstud3/nikewebsite" link="https://nike-prototype.netlify.app/"
         description="This is a personal project for my portfolio, featuring the website from one of the most famous shoe brand in the world, Nike."
       >

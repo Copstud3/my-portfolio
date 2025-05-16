@@ -7,8 +7,8 @@
 @layer base {
   :root {
     /* Converting #dfdfdc to HSL: 60, 1%, 87% */
-    --background: 60 1% 87%;
-    --foreground: 195 15% 10%;
+    --background: 170 100% 94%;
+    --foreground: 24 36% 16%;
  
     --card: 60 1% 87%;
     --card-foreground: 195 15% 10%;
@@ -40,8 +40,8 @@
   }
  
   .dark {
-    --background: 195 15% 10%;
-    --foreground: 38 9% 61%;
+    --background: 221 28% 16%;
+    --foreground: 170 100% 94%;
  
     --card: 195 15% 10%;
     --card-foreground: 38 9% 61%;
