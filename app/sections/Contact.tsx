@@ -9,7 +9,7 @@ interface ContactProps {
   theme?: string;
 }
 
-const Contact = ({ t, theme }: ContactProps) => {
+const Contact = ({ t }: ContactProps) => {
   return (
     <section className="flex flex-col mb-32">
       <div className="flex flex-col justify-center items-center mb-6">

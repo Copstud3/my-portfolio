@@ -7,7 +7,7 @@ interface AboutProps {
   theme: string | undefined; // theme can be undefined initially
 }
 
-export default function About({ t, theme }: AboutProps) {
+export default function About({ t}: AboutProps) {
   return (
     <section className="flex flex-col mb-32">
       <div className="flex flex-col justify-center items-center">
