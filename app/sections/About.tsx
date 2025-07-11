@@ -4,6 +4,7 @@ import React from "react";
 import { backend, extras, frontend } from "../constants/skills";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Image from "next/image";
 
 const isMobile = typeof window !== "undefined" ? window.innerWidth < 900 : false;
 
@@ -39,7 +40,7 @@ export default function About() {
 
       <div className="max-sm:pt-5">
         <p className="font-gilroy text-[14px] md:text-[20px] about-p">
-          I'm a Full Stack Developer passionate about building fast, scalable,
+          I&apos;m a Full Stack Developer passionate about building fast, scalable,
           and user-focused web apps. On the frontend with great attention to details, I work with React,
           Next.js, TypeScript, and Tailwind CSS—crafting slick interfaces with
           Framer Motion and GSAP. While, on the backend, I use Node.js, Express, PostgreSQL, and Prisma to ship
@@ -59,9 +60,8 @@ export default function About() {
         {frontend.map((skill, index) => (
           <div
         key={index}
-        className="flex items-center gap-3 mb-4 px-4 py-3 hover:bg-black/10 rounded-lg cursor-pointer flex-shrink-0"
-          >
-        <img
+        className="flex items-center gap-3 mb-4 px-4 py-3 hover:bg-black/10 rounded-lg cursor-pointer flex-shrink-0">
+        <Image
           src={skill.img}
           alt={skill.name}
           className="w-12 h-12 object-contain"
@@ -77,7 +77,7 @@ export default function About() {
         key={index}
         className="flex flex-col items-center justify-center gap-1 mb-1 py-1 hover:bg-black/10 rounded-lg cursor-pointer"
           >
-        <img
+        <Image
           src={skill.img}
           alt={skill.name}
           className="w-12 h-12 object-contain"
@@ -95,7 +95,7 @@ export default function About() {
             key={index}
             className="flex items-center gap-3 mb-4 px-4 py-3 hover:bg-black/10 rounded-lg cursor-pointer"
           >
-            <img
+            <Image
               src={skill.img}
               alt={skill.name}
               className="w-12 h-12 object-contain"
@@ -111,7 +111,7 @@ export default function About() {
         key={index}
         className="flex flex-col items-center justify-center gap-1 mb-1 py-1 hover:bg-black/10 rounded-lg cursor-pointer"
           >
-        <img
+        <Image
           src={skill.img}
           alt={skill.name}
           className="w-12 h-12 object-contain"
@@ -128,7 +128,7 @@ export default function About() {
             key={index}
             className="flex items-center gap-3 mb-4 px-4 py-3 hover:bg-black/10 rounded-lg cursor-pointer"
           >
-            <img
+            <Image
               src={skill.img}
               alt={skill.name}
               className="w-12 h-12 object-contain"
@@ -145,7 +145,7 @@ export default function About() {
         key={index}
         className="flex flex-col items-center justify-center gap-1 mb-1 py-1 hover:bg-black/10 rounded-lg cursor-pointer"
           >
-        <img
+        <Image
           src={skill.img}
           alt={skill.name}
           className="w-12 h-12 object-contain"

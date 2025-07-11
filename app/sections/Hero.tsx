@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
-import { text } from "stream/consumers";
 
 gsap.registerPlugin(ScrollTrigger);
 
