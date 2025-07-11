@@ -1,81 +1,42 @@
-/* app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@qpokychuk/gilroy@1.0.2/index.min.css');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
- 
-@layer base {
-  :root {
-    /* Converting #dfdfdc to HSL: 60, 1%, 87% */
-    --background: 170 100% 94%;
-    --foreground: 24 36% 16%;
- 
-    --card: 60 1% 87%;
-    --card-foreground: 195 15% 10%;
- 
-    --popover: 60 1% 87%;
-    --popover-foreground: 195 15% 10%;
- 
-    /* Keeping other UI elements consistent with the new theme */
-    --primary: 195 15% 10%;
-    --primary-foreground: 60 1% 87%;
- 
-    --secondary: 195 15% 20%;
-    --secondary-foreground: 60 1% 87%;
- 
-    --muted: 60 1% 82%;
-    --muted-foreground: 195 15% 30%;
- 
-    --accent: 60 1% 82%;
-    --accent-foreground: 195 15% 10%;
- 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 1% 87%;
- 
-    --border: @apply border-coral-blue;
-    --input: 195 15% 80%;
-    --ring: 195 15% 30%;
- 
-    --radius: 0.5rem;
+@import 'tailwindcss';
+
+@theme {
+  --breakpoint-sm: 56rem;
+  --font-nunito: 'Nunito';
+  --font-manrope: 'Manrope', sans-serif;
+  --font-gilroy: 'Gilroy', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+}
+
+body {
+  @apply text-black selection:bg-black selection:text-white;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+}
+
+@keyframes bounce-right {
+  0%,
+  100% {
+    transform: translateX(0);
   }
- 
-  .dark {
-    --background: 221 28% 16%;
-    --foreground: 170 100% 94%;
- 
-    --card: 195 15% 10%;
-    --card-foreground: 38 9% 61%;
- 
-    --popover: 195 15% 10%;
-    --popover-foreground: 38 9% 61%;
- 
-    /* Keeping other UI elements consistent with the dark theme */
-    --primary: 38 9% 61%;
-    --primary-foreground: 195 15% 10%;
- 
-    --secondary: 38 9% 51%;
-    --secondary-foreground: 195 15% 10%;
- 
-    --muted: 195 15% 15%;
-    --muted-foreground: 38 9% 51%;
- 
-    --accent: 195 15% 15%;
-    --accent-foreground: 38 9% 61%;
- 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 38 9% 61%;
- 
-    --border: @apply border-dull-brown;
-    --input: 195 15% 20%;
-    --ring: 38 9% 51%;
+  50% {
+    transform: translateX(6px);
   }
 }
- 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+
+/* Mobile: always animate */
+.animate-bounce-right {
+  animation: bounce-right 1s ease-in-out infinite;
 }

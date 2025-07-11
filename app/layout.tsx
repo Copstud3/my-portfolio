@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "./themeProvider";
 import "./globals.css";
-import { LanguageProvider } from "./languageContext";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://chris-is-a-dev.vercel.app"),
-  title: "Christopher Chukwuebuka | Web developer ",
+  title: "Christopher Chukwuebuka | Software developer ",
   openGraph: {
     description:
       "I am a full stack developer building elegant web app solutions.",
@@ -13,6 +11,10 @@ export const metadata: Metadata = {
   },
   keywords: [
     "web developer",
+    "Rust",
+    "Rustacean",
+    "full stack developer",
+    "software engineer",
     "website",
     "web design",
     "web development",
@@ -34,11 +36,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`font-monospace transition-colors duration-1000 bg-background`}
+        className={`bg-[#f5f5f5] overflow-x-hidden`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <LanguageProvider>{children}</LanguageProvider>
-        </ThemeProvider>
+         {children}
       </body>
     </html>
   );
