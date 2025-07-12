@@ -61,7 +61,7 @@ export default function About() {
         </p>
       </div>
 
-      <p className="font-gilroy text-[30px] md:text-[50px] tracking-tighter md:tracking-[-3px] pt-5">
+      <p className="font-gilroy max-sm:text-center max-sm:pt-10 text-[30px] md:text-[50px] tracking-tighter md:tracking-[-3px] pt-5">
         Tools
       </p>
 

@@ -5,6 +5,8 @@
 
 @theme {
   --breakpoint-sm: 56rem;
+  --breakpoint-lg: 80rem;
+  --breakpoint-xl: 90rem;
   --font-nunito: 'Nunito';
   --font-manrope: 'Manrope', sans-serif;
   --font-gilroy: 'Gilroy', sans-serif;
@@ -13,7 +15,6 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-
 }
 
 body {

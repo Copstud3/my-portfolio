@@ -63,15 +63,28 @@ const formatDate = () => {
   return `${dayName}, ${dayWithSuffix} ${monthName}, ${year} ${displayHours}:${minutes}:${seconds}${ampm} WAT`;
 };
 
+const formatShortDate = () => {
+  const date = new Date();
+  const utcHours = date.getUTCHours();
+  const watHours = (utcHours + 1) % 24;
+  const minutes = date.getUTCMinutes().toString().padStart(2, "0");
+  const ampm = watHours >= 12 ? "pm" : "am";
+  const displayHours = watHours % 12 || 12;
+  return `${displayHours}:${minutes}${ampm} WAT`;
+};
+
 export default function Navbar() {
   const [currentTime, setCurrentTime] = useState<string>("");
+  const [currentShortTime, setCurrentShortTime] = useState<string>("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setCurrentTime(formatDate());
+    setCurrentShortTime(formatShortDate());
     const interval = setInterval(() => {
       setCurrentTime(formatDate());
+      setCurrentShortTime(formatShortDate());
     }, 1000);
     return () => clearInterval(interval);
   }, []);
@@ -133,8 +146,11 @@ export default function Navbar() {
 
       {/* Desktop time */}
       <div className="max-sm:hidden">
-        <p className="font-nunito text-black/50  text-[18px] tracking-tight">
+        <p className="font-nunito text-black/50 text-[18px] tracking-tight lg:hidden xl:block">
           {currentTime}
+        </p>
+        <p className="font-nunito text-black/50 text-[18px] tracking-tight hidden lg:block xl:hidden">
+          {currentShortTime}
         </p>
       </div>
 

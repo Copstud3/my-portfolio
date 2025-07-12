@@ -13,7 +13,7 @@ export const projects: Project[] = [
     {
         title: "<Art.Barbers />", 
         description: "A website for a top class barbing salon to deliver exquisite styling to their clients.",
-        tech: ["React", "Tailwind", "Resend", "GSAP"],
+        tech: ["Next.js", "Tailwind", "Resend", "GSAP"],
         category: "Frontend",
         color: "from-purple-400 to-pink-400",
         accent: "bg-purple-100",
@@ -32,8 +32,8 @@ export const projects: Project[] = [
     },
     {
         title: "<Art.Quarters />", 
-        description: "A website for a top class barbing salon to deliver exquisite styling to their clients.",
-        tech: ["React", "Tailwind", "GSAP"],
+        description: "A website for a vibrant hub where artistic expression meets community spirit. They offers a unique blend of experiences designed to nurture your creativity and well-being. Explore their diverse offerings and discover a space that inspires and empowers you.",
+        tech: ["Next.js", "Tailwind", "GSAP"],
         category: "Frontend",
         color: "from-purple-400 to-cyan-400",
         accent: "bg-yellow-100",
