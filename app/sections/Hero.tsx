@@ -81,7 +81,7 @@ export default function Hero() {
           <span className="text-black/30"> good</span>, <br /> and
           <span className="text-black/30"> drives</span> results.
         </p>
-        <p className="absolute top-[250px] md:top-[210px] right-[20px] md:right-[50px] lg:right-[80px] xl:right-[120px] text-right text-black font-gilroy md:w-[800px] mx-auto right-text">
+        <p className="absolute top-[250px] md:top-[210px] right-[20px] md:right-[50px] lg:right-[80px] xl:right-[160px] text-right text-black font-gilroy md:w-[800px] mx-auto right-text">
           I bring ideas to <span className="text-black/30">life</span> with{" "}
           <br />
           clean <span className="text-black/30">code</span> and smart{" "} <br />

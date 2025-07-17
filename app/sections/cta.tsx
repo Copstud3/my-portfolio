@@ -51,7 +51,7 @@ export default function CTA() {
       <p className="font-gilroy text-[35px] md:text-[60px] md:w-[700px] mx-auto leading-[40px] md:leading-[70px] tracking-tighter md:tracking-[-4px] pt-20 let">
         Let&apos;s create something impactful together.
       </p>
-      <p className="md:w-[650px] max-sm:pt-3 mx-auto font-gilroy text-black/50 max-sm:px-5 text-[14px] md:text-[18px] let-text">
+      <p className="md:w-[650px] max-sm:pt-3 pt-3 mx-auto font-gilroy text-black/50 max-sm:px-5 text-[14px] md:text-[18px] let-text">
         I love turning ideas into scalable digital products that actually make a
         difference and are built to deliver real results for users and
         businesses alike.
