@@ -87,7 +87,7 @@ export default function Projects() {
 
   return (
     <section className="min-h-screen px-3 md:px-[50px] lg:px-20 xl:px-40 overflow-hidden" id="projects">
-      <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 md:mb-8 xl:mb-16">
+      <div className="flex flex-col md:flex-row md:items-center justify-between lg:pt-10 mb-16 md:mb-8 xl:mb-16">
         <p className="font-gilroy max-sm:text-left text-[40px] lg:text-[67px] xl:text-[75px] tracking-tighter lg:tracking-[-5px] feature">
           Featured Projects
         </p>

@@ -73,7 +73,7 @@ export default function Hero() {
       .to(".connect-btn", {scale: 1, duration: 0.5, ease: "expo.in"});
   });
   return (
-    <section className="h-screen flex flex-col  hero">
+    <section className="min-h-screen flex flex-col  hero">
       <Navbar />
       <div className="text-[#191919] pt-15 lg:pt-[100px] text-[30px] md:text-[48px] lg:text-[52px] xl:text-[65px] font-gilroy lg:leading-[55px] xl:leading-[70px] capitalize tracking-tight relative">
         <p className="absolute left-[20px] md:left-[50px] lg:left-[80px] xl:left-[160px] left-text">
@@ -91,12 +91,13 @@ export default function Hero() {
           <span className="text-black/30"> industries.</span>
         </p>
       </div>
+      <div className="h-50 hidden md:block min-[65rem]:hidden lg:hidden" />
       <button
         onClick={() => {
           window.location.href =
             "mailto:victorchris73@gmail.com?subject=Web Development Inquiry&body=Hi%20Chris,%20I%20would%20like%20to%20work%20with%20you%20on%20a%20project.";
         }}
-        className="px-8 py-3 rounded-full w-fit mx-auto inset-ring-2 inset-ring-black font-gilroy text-[20px] hover:text-[30px] cursor-pointer text-black transition-all duration-300 ease-in-out [@media(min-height:600px)]:mt-[420px] [@media(min-height:650px)]:mt-[500px] [@media(min-height:800px)]:mt-[750px] lg:mt-[450px] xl:mt-[500px] connect-btn"
+        className="px-8 py-3 rounded-full w-fit mx-auto inset-ring-2 inset-ring-black font-gilroy text-[20px] hover:text-[30px] cursor-pointer text-black transition-all duration-300 ease-in-out [@media(min-height:600px)]:mt-[420px] [@media(min-height:650px)]:mt-[500px] lg:mt-[450px] xl:mt-[500px] connect-btn"
       >
         Connect With Me!
       </button>
