@@ -146,17 +146,17 @@ export default function Navbar() {
 
       {/* Desktop time */}
       <div className="max-sm:hidden">
-        <p className="font-nunito text-black/50 text-[18px] tracking-tight lg:hidden xl:block">
+        <p className="font-nunito text-black/50 text-[18px] tracking-tight min-[65rem]:hidden lg:hidden xl:block">
           {currentTime}
         </p>
-        <p className="font-nunito text-black/50 text-[18px] tracking-tight hidden lg:block xl:hidden">
+        <p className="font-nunito text-black/50 text-[18px] tracking-tight hidden min-[65rem]:block lg:block xl:hidden">
           {currentShortTime}
         </p>
       </div>
 
       {/* Hamburger menu */}
       <button
-        className="space-y-1.5 md:hidden z-30 relative"
+        className={`space-y-1.5 md:hidden z-30 ${mobileMenuOpen ? "fixed right-5" : "relative"} `}
         aria-label="Toggle menu"
         onClick={() => setMobileMenuOpen((open) => !open)}
       >
@@ -179,17 +179,36 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`absolute top-20 inset-0 h-[200px] bg-[#f5f5f5] z-20 flex flex-col items-center  gap-3 md:hidden transition-all duration-300 ease-in-out ${
+        className={`fixed top-0 inset-0 h-screen pt-5 bg-background z-20 flex flex-col items-center  gap-10 md:hidden transition-all duration-300 ease-in-out ${
           mobileMenuOpen
             ? "opacity-100 visible translate-y-0"
             : "opacity-0 invisible -translate-y-4"
         }`}
       >
+        <Link href="/" className="-ml-28">
+        <div className="flex items-center gap-3">
+          <Image
+            src={"/images/profile.jpg"}
+            alt="profile"
+            width={300}
+            height={300}
+            className="rounded-full w-10 md:w-14"
+          />
+          <div className="flex flex-col -space-y-1">
+            <span className="font-nunito text-[#191919] font-semibold max-sm:tracking-tight">
+              Christopher Chukwuebuka
+            </span>
+            {/* <span className="font-nunito text-[#9f9f9f] max-sm:text-sm">
+              Full stack developer | Rustacean 🦀
+            </span> */}
+          </div>
+        </div>
+      </Link>
         {navLinks.map((link, index) => (
           <a
             key={index}
             href={link.href}
-            className={`text-[#191919] font-nunito text-base tracking-tight hover:underline transition-all duration-300 ${
+            className={`text-[#191919] font-nunito text-[20px] tracking-tight hover:underline transition-all duration-300 ${
               mobileMenuOpen
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-2"

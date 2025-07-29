@@ -29,7 +29,6 @@ export default function Projects() {
       opacity: 0,
       y: 100,
       scale: 0.8,
-      rotationY: 45,
       transformOrigin: "center center"
     });
 
@@ -50,25 +49,44 @@ export default function Projects() {
 
     header.to(".feature", { xPercent: 0, duration: 1, ease: "expo.out" }, "a")
     .to(".feature-text", { xPercent: 0, duration: 1, ease: "expo.out" }, "a")
-    cards.to(".project-card", {
+    if (isMobile) {
+      // Animate each card individually when it enters viewport on mobile
+      document.querySelectorAll(".project-card").forEach((card, i) => {
+      gsap.to(card, {
+        scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+        toggleActions: "play none none none",
+        },
         opacity: 1,
         y: 0,
         scale: 1,
-        rotationY: 0,
-        ease: "elastic.out(1, 0.5)",
-        stagger: {
-          each: 0.5,
-          grid: "auto",
-          from: "start"
-        }
+        duration: 0.5,
+        ease: "power3.in",
+        delay: i * 0.01,
       });
+      });
+    } else {
+      // Animate all cards together with stagger on desktop/tablet
+      cards.to(".project-card", {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      ease: "elastic.out(1, 0.5)",
+      stagger: {
+        each: 0.5,
+        grid: "auto",
+        from: "start"
+      }
+      });
+    }
 
 
     
   })
 
   return (
-    <section className="min-h-screen px-3 md:px-[50px] lg:px-20 xl:px-40 max-sm:pt-20 overflow-hidden" id="projects">
+    <section className="min-h-screen px-3 md:px-[50px] lg:px-20 xl:px-40 overflow-hidden" id="projects">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 md:mb-8 xl:mb-16">
         <p className="font-gilroy max-sm:text-left text-[40px] lg:text-[67px] xl:text-[75px] tracking-tighter lg:tracking-[-5px] feature">
           Featured Projects

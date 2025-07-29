@@ -78,7 +78,7 @@ export default function CTA() {
 
       {/* <div className="w-[700px] h-[1px] bg-black/30 mx-auto mt-10" /> */}
 
-      <p className="font-gilroy font-bold text-center text-[45px] md:text-[100px] lg:text-[150px] xl:text-[200px] tracking-tighter md:tracking-[-10px] uppercase bg-gradient-to-b from-black/50 from-10% to-[#f5f5f5] to-80% text-transparent bg-clip-text pt-10 ">
+      <p className="font-gilroy font-bold text-center text-[45px] md:text-[100px] lg:text-[150px] xl:text-[200px] tracking-tighter md:tracking-[-10px] uppercase bg-gradient-to-b from-black/50 from-10% to-background to-80% text-transparent bg-clip-text pt-10 ">
         Connect with me
       </p>
 

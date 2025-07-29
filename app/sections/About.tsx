@@ -88,7 +88,7 @@ export default function About() {
         ))}
       </div>
 
-      <div className="lg:hidden grid grid-cols-3 items-center gap-3 mt-5">
+      <div className="lg:hidden min-[65rem]:hidden grid grid-cols-3 items-center gap-3 mt-5">
         {frontend.map((skill, index) => (
           <div
             key={index}
@@ -131,7 +131,7 @@ export default function About() {
         ))}
       </div>
 
-      <div className="lg:hidden grid grid-cols-3 items-center gap-3 mt-5">
+      <div className="lg:hidden min-[65rem]:hidden grid grid-cols-3 items-center gap-3 mt-5">
         {backend.map((skill, index) => (
           <div
             key={index}
@@ -174,7 +174,7 @@ export default function About() {
         ))}
       </div>
 
-      <div className="lg:hidden grid grid-cols-3 items-center gap-3 mt-5">
+      <div className="lg:hidden min-[65rem]:hidden grid grid-cols-3 items-center gap-3 mt-5">
         {extras.map((skill, index) => (
           <div
             key={index}
