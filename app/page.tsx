@@ -8,7 +8,7 @@ import CTA from "./sections/cta";
 
 export default function Home() {
   return (
-    <main>
+    <main className="pb-16 md:pb-24">
       <SmoothScrollWrapper>
         <Hero />
         <Projects />

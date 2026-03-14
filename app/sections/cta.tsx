@@ -1,94 +1,78 @@
-"use client";
-
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import React from "react";
-
-const ctaLinks = [
-  { name: "X(Twitter)", href: "https://x.com/copstud3" },
-  { name: "LinkedIn", href: "https://linkedin.com/in/copstud3" },
-  { name: "Github", href: "https://github.com/copstud3" },
-];
-
-const date = new Date();
-const year = date.getFullYear();
-const isMobile = typeof window !== "undefined" ? window.innerWidth < 900 : false;
-const isSmallDesktop = typeof window !== "undefined" ? window.innerWidth < 1300 : false;
-
+import Link from "next/link";
+import { BiChevronRight } from "react-icons/bi";
+import { BsTwitterX } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa6";
+import { HiOutlineArrowRight } from "react-icons/hi";
 
 export default function CTA() {
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#contact",
-        start: isMobile ? "-100% top" : isSmallDesktop ? "-50% top" : "-30% top",
-        toggleActions: "play reverse play reverse",
-      },
-    })
-
-    tl.from(".let", {
-      opacity: 0,
-      y: 100,
-      duration: 0.5,
-      ease: "expo.out"
-    })
-    .from(".let-text", {
-      opacity: 0,
-      y: 100,
-      duration: 0.5,
-      ease: "expo.out"
-    })
-    .from(".links", {
-      opacity: 0,
-      y: 100,
-      duration: 0.5,
-      ease: "expo.out"
-    })
-  })
-
   return (
-    <section className="text-center " id="contact">
-      <p className="font-gilroy text-[35px] md:text-[60px] md:w-[700px] mx-auto leading-[40px] md:leading-[70px] tracking-tighter md:tracking-[-4px] pt-20 let">
-        Let&apos;s create something impactful together.
-      </p>
-      <p className="md:w-[650px] max-sm:pt-3 pt-3 mx-auto font-gilroy text-black/50 max-sm:px-5 text-[14px] md:text-[18px] let-text">
-        I love turning ideas into scalable digital products that actually make a
-        difference and are built to deliver real results for users and
-        businesses alike.
-      </p>
+    <section className="mt-14 md:mt-30 pb-10 md:pb-20" id="contact">
+      <h2 className="text-[30px] md:text-[40px] font-semibold flex items-center tracking-tight">
+        Contact <BiChevronRight />
+      </h2>
 
-      <div className="flex items-center gap-9 justify-center pt-4 links">
-        {ctaLinks.map((link, index) => (
-          <ul key={index}>
-            <li className="font-gilroy text-base tracking-tight md:text-[20px]">
-              <a href={link.href} className="hover:underline">
-                {link.name}
-              </a>
-            </li>
-          </ul>
-        ))}
+      <div className="mt-8 md:mt-10">
+        {/* Availability badge */}
+        <div className="flex items-center gap-2 mb-8">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0f8ad8] opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0f8ad8]" />
+          </span>
+          <span className="text-white/40 text-xs tracking-[0.2em] uppercase">
+            Available for new projects
+          </span>
+        </div>
+
+        {/* Big headline */}
+        <p className="text-[clamp(30px,11vw,80px)] font-semibold tracking-tighter leading-[1.05] text-white/40 selection:text-white/80">
+          Have an idea?
+          <br />
+          <span className="text-white">Let&apos;s build it.</span>
+        </p>
+
+        <p className="mt-5 md:mt-6 text-[16px] md:text-[18px] text-white/50 max-w-md leading-relaxed max-[500px]:leading-snug font-semibold max-[500px]:tracking-tight">
+          I&apos;m always open to discussing new projects, creative ideas, or
+          opportunities to be part of something great.
+        </p>
+
+        {/* Email CTA */}
+        <Link
+          href="mailto:victorchris73@gmail.com"
+          className="group mt-8 md:mt-10 inline-flex items-center gap-3 border border-white/20 hover:border-white/40 rounded-full px-5 md:px-6 py-3 transition-all duration-300 hover:bg-white/5"
+        >
+          <span className="text-white/70 group-hover:text-white transition-colors duration-300 text-sm tracking-wide">
+            Send me a message
+          </span>
+          <HiOutlineArrowRight
+            className="text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all duration-300"
+            size={16}
+          />
+        </Link>
+
+        {/* Divider */}
+        <div className="mt-10 md:mt-14 mb-8 h-px bg-white/10" />
+
+        {/* Footer row */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <p className="text-white/40 text-sm tracking-tight font-medium">
+            © {new Date().getFullYear()} Christopher Chukwuebuka
+          </p>
+          <div className="flex gap-5">
+            <Link href="https://github.com/copstud3" target="_blank">
+              <FaGithub
+                className="text-white/40 hover:text-white transition duration-300"
+                size={22}
+              />
+            </Link>
+            <Link href="https://twitter.com/copstud3" target="_blank">
+              <BsTwitterX
+                className="text-white/40 hover:text-white transition duration-300"
+                size={22}
+              />
+            </Link>
+          </div>
+        </div>
       </div>
-
-      <a
-        href="mailto:victorchris73@gmail.com?subject=Let's%20Work%20Together&body=Hi%20Chris,%20I%20would%20like%20to%20work%20with%20you%20on%20a%20project."
-        className="px-8 py-3 rounded-full w-fit mx-auto inset-ring md:inset-ring-2 inset-ring-black font-gilroy md:text-[20px] cursor-pointer text-black transition-all duration-300 ease-in-out mt-[20px] hover:text-[25px] inline-block text-center"
-      >
-        Let&apos;s Connect!
-      </a>
-
-      {/* <div className="w-[700px] h-[1px] bg-black/30 mx-auto mt-10" /> */}
-
-      <p className="font-gilroy font-bold text-center text-[45px] md:text-[100px] lg:text-[150px] xl:text-[200px] tracking-tighter md:tracking-[-10px] uppercase bg-gradient-to-b from-black/50 from-10% to-background to-80% text-transparent bg-clip-text pt-10 ">
-        Connect with me
-      </p>
-
-      <p className="text-center font-gilroy text-[14px] md:text-[18px] text-black/70 pb-10 lg:pb-5">
-        Built by{" "}
-        <a href="https://x.com/copstud3" className="underline">
-          Chris
-        </a>{" "}
-        - {year}
-      </p>
     </section>
   );
 }

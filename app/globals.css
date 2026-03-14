@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://cdn.jsdelivr.net/npm/@qpokychuk/gilroy@1.0.2/index.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@qpokychuk/gilroy@1.0.2/index.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
-  --breakpoint-sm: 56rem;
-  --breakpoint-lg: 80rem;
-  --breakpoint-xl: 90rem;
-  --color-background: #e4e0e0;
-  --font-nunito: 'Nunito';
-  --font-manrope: 'Manrope', sans-serif;
-  --font-gilroy: 'Gilroy', sans-serif;
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --font-nunito: "Nunito";
+  --font-poppins: "Poppins", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+  --font-gilroy: "Gilroy", sans-serif;
+  --font-mont: "Montserrat", sans-serif;
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -19,7 +22,7 @@ html {
 }
 
 body {
-  @apply text-black selection:bg-black selection:text-white;
+  @apply  font-poppins;
 }
 
 @font-face {
