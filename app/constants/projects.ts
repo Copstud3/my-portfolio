@@ -49,6 +49,17 @@ export const projects: Project[] = [
     url: "https://artdotquarter.io",
   },
   {
+    title: "Omarioncruz",
+    description:
+      "Well designed portfolio website for a professional video producer.",
+    tech: ["Next.js", "Tailwind", "Shadcn UI"],
+    category: "Front end",
+    color: "from-[#FDC830] to-[#F37335]",
+    accent: "bg-pink-100",
+    iconName: "Code",
+    url: "https://omarioncruz.com/",
+  },
+  {
     title: "Wedding Invite",
     description: "A full-stack app for wedding planners to track guest counts.",
     tech: ["Next.js", "Tailwind", "Supabase", "Resend"],

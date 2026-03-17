@@ -11,9 +11,7 @@ export default function Projects() {
 
       <div className="mt-6 md:mt-8 space-y-6 md:space-y-7">
         {projects.map((project, index) => (
-          <article
-            key={index}
-                  >
+          <article key={index}>
             <div className="flex flex-col gap-2 md:flex-row md:items-start md:gap-3">
               <Link
                 href={project.url}
@@ -27,11 +25,15 @@ export default function Projects() {
                 {project.description}
               </p>
             </div>
-
-            
           </article>
         ))}
       </div>
+
+      <Link href={"https://github.com/copstud3"} target="_blank">
+        <p className="text-center pt-5 lg:pt-10 max-[500px]:tracking-tighter tracking-tight text-white font-semibold lg:text-[20px] hover:underline underline-offset-2 decoration-3">
+          See more projects on my github
+        </p>
+      </Link>
     </section>
   );
 }
